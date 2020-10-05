@@ -1,12 +1,16 @@
+import java.util.List;
+
 public class BackTrackingSearch {
     Graph graph;
     int color[];
     int mColor;
+    List<Element> SortedDegree;
 
     public BackTrackingSearch(Graph graph,int mColor) {
         this.graph = graph;
 //        this.color = color;
         this.mColor = mColor;
+        this.SortedDegree = graph.getDegreeSortedVertex();
     }
 
     public Graph getGraph() {
@@ -44,24 +48,61 @@ public class BackTrackingSearch {
     }
 
     /* A recursive utility function to solve m coloring problem */
-    boolean recursiveBackTracking(int v)
+    boolean recursiveBackTracking(Element v)
     {
-		/* base case: If all vertices are assigned a color then return true */
-        if (v == graph.totalVertex)
-            return true;
+//        System.out.println("Got vertex:"+v.index);
+//		/* base case: If all vertices are assigned a color then return true */
+//        int myCounter;
+//        for( myCounter =0; myCounter< graph.totalVertex; myCounter++){
+//            if(color[myCounter]==0) //got at least one vertex that isn't colored yet
+//                break;
+//        }
+//        System.out.println("Color ------------");
+//        for (int myColor:color) {
+//            System.out.print(myColor+" ");
+//        }
+//        System.out.println("\nColor ------------");
+//        if(myCounter == graph.totalVertex){
+//            System.out.println("all vertecies are colored");
+//            return true;
+//        }
+//        System.out.println("IM here Vertex:"+ v.index);
+//        if (v == graph.totalVertex)
+//            return true;
 
 		/* Consider this vertex v and try different colors */
         for (int c = 1; c <= getmColor(); c++) {
-			/* Check if assignment of color c to v is fine*/
-            if (isSafe(v, c)) {
-                color[v] = c;
+            /* Check if assignment of color c to v is fine*/
+            if (isSafe(v.index, c)) {
+                color[v.index] = c;
 
-				/* recur to assign colors to rest of the vertices */
-                if (recursiveBackTracking(v + 1))
+                int ElementIndex = SortedDegree.indexOf(v);
+                System.out.println("Current vertex:"+v.index);
+
+                /* base case: If all vertices are assigned a color then return true */
+                int myCounter;
+                for( myCounter =0; myCounter< graph.totalVertex; myCounter++){
+                    if(color[myCounter]==0) //got at least one vertex that isn't colored yet
+                        break;
+                }
+//                for (int myColor:color) {
+//                    System.out.print(myColor+" ");
+//                }
+                if(myCounter == graph.totalVertex){
+                    System.out.println("all vertecies are colored");
                     return true;
-
+                }
+//                if (ElementIndex+1 == graph.getTotalVertex()){
+//                    //as all vertices explored , re initialised
+//                    ElementIndex = 0;
+//                }
+                Element VertexElement = SortedDegree.get(ElementIndex+1);
+                System.out.println("Next vertex:"+ VertexElement.index);
+				/* recur to assign colors to rest of the vertices, v+1 */
+                if (recursiveBackTracking(VertexElement))
+                    return true;
 				/* If assigning color c doesn't lead to a solution then remove it */
-                color[v] = 0;
+                color[v.index] = 0;
             }
         }
 
@@ -86,8 +127,12 @@ public class BackTrackingSearch {
         for (int i = 0; i < VertexNo; i++)
             color[i] = 0;
 
-        // Call recursiveBackTracking() for vertex 0
-        if ( !recursiveBackTracking(0)) {
+        // Call recursiveBackTracking() for the vertex that has the largest degree
+
+        Element VertexElement = SortedDegree.get(0);
+        System.out.println("Starting Vertex/index:"+VertexElement.index);
+
+        if ( !recursiveBackTracking(VertexElement)) {
             System.out.println("Solution does not exist");
             return false;
         }
