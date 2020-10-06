@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="559b6e26-0cec-471b-846c-c73e7d2f447d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GreedyColoring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/m-ColorGraph/BackTrackingSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/m-ColorGraph/BackTrackingSearch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/m-ColorGraph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/m-ColorGraph/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/m-ColorGraph/mColoringMain.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BackTrackingSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackTrackingSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Element.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mColoringMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mColoringMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mColoringMain.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,19 +29,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BackTrackingSearch.java">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="97" selection-end-column="19" />
+            <state relative-caret-position="792">
+              <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1601994005985" expanded="true" signature="228:420" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graph.java">
+        <entry file="file://$PROJECT_DIR$/student.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            <state relative-caret-position="154">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GreedyColoring.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="24" column="91" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,20 +62,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Element.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mColoringMain.java">
+        <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            <state relative-caret-position="308">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,10 +87,26 @@
     <findStrings>
       <find>graph</find>
       <find>vertex</find>
+      <find>Graph</find>
+      <find>Element</find>
+      <find>SortVertexRespectToDegree</find>
+      <find>recursiveBackTracking</find>
+      <find>VertexDegreeArray</find>
+      <find>vertexList</find>
+      <find>print</find>
+      <find>get</find>
+      <find>ElementIndexInSortedDegree</find>
+      <find>getDegreeSortedVertex</find>
+      <find>SortedDegree</find>
+      <find>DegreeSortedVertex</find>
+      <find>Index:</find>
+      <find>prin</find>
     </findStrings>
     <replaceStrings>
       <replace>Graph</replace>
       <replace>totalVertex</replace>
+      <replace>Graph2</replace>
+      <replace>Element2</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -91,10 +119,20 @@
         <option value="$PROJECT_DIR$/src/graph.java" />
         <option value="$PROJECT_DIR$/src/mColoringProblem.java" />
         <option value="$PROJECT_DIR$/src/Elements.java" />
-        <option value="$PROJECT_DIR$/src/Graph.java" />
         <option value="$PROJECT_DIR$/src/Element.java" />
-        <option value="$PROJECT_DIR$/src/BackTrackingSearch.java" />
         <option value="$PROJECT_DIR$/src/mColoringMain.java" />
+        <option value="$PROJECT_DIR$/src/offline/Course.java" />
+        <option value="$PROJECT_DIR$/src/offline/Main2.java" />
+        <option value="$PROJECT_DIR$/src/offline/Element2.java" />
+        <option value="$PROJECT_DIR$/src/offline/Graph2.java" />
+        <option value="$PROJECT_DIR$/src/offline/BackTrackingSearch2.java" />
+        <option value="$PROJECT_DIR$/src/BackTrackingSearch2.java" />
+        <option value="$PROJECT_DIR$/course.txt" />
+        <option value="$PROJECT_DIR$/src/BackTrackingSearch.java" />
+        <option value="$PROJECT_DIR$/student.txt" />
+        <option value="$PROJECT_DIR$/src/Graph.java" />
+        <option value="$PROJECT_DIR$/src/GreedyColoring.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -111,6 +149,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,16 +157,10 @@
               <item name="m-ColorGraph" type="b2602c69:ProjectViewProjectNode" />
               <item name="m-ColorGraph" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="m-ColorGraph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="m-ColorGraph" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -141,6 +174,11 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="offline" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -153,7 +191,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.mColoringMain">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="m-ColorGraph" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mColoringMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mColoringMain" />
       <module name="m-ColorGraph" />
@@ -187,35 +238,37 @@
       <updated>1601882511122</updated>
       <workItem from="1601882514132" duration="6546000" />
       <workItem from="1601900717248" duration="6259000" />
-      <workItem from="1601913996685" duration="1919000" />
+      <workItem from="1601913996685" duration="4412000" />
+      <workItem from="1601928053929" duration="7141000" />
+      <workItem from="1601958047410" duration="22599000" />
+      <workItem from="1601996025630" duration="683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14724000" />
+    <option name="totallyTimeSpent" value="47640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1452345" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.16868381" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="1" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32872504" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.38863286" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32872504" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.55760366" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32872504" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="right" id="Theme Preview" order="0" />
@@ -232,6 +285,46 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/mColoringProblem.java" />
     <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/Objects.java">
@@ -245,34 +338,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+    <entry file="file://$PROJECT_DIR$/m-ColorGraph.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mColoringMain.java" />
+    <entry file="file://$PROJECT_DIR$/src/Element.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/M-Color Matrix/mColoringMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/M-Color Matrix/BackTrackingSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="82" column="16" lean-forward="true" selection-start-line="82" selection-start-column="16" selection-end-line="86" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackTrackingSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="142" column="51" lean-forward="true" selection-start-line="142" selection-start-column="51" selection-end-line="142" selection-end-column="51" />
+          <folding>
+            <marker date="1601984329568" expanded="true" signature="1974:2030" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1601994005985" expanded="true" signature="228:420" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GreedyColoring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="24" column="91" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackTrackingSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="97" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mColoringMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        <state relative-caret-position="308">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

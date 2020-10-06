@@ -70,7 +70,7 @@ public class Graph {
         int index = 0;
         for (Course vertex : vertexList) {
             VertexDegreeArray[index] = vertex.getAdjList().size(); //store the degree
-            System.out.println("Index:"+index+" Degree:"+VertexDegreeArray[index]);
+//            System.out.println("Index:"+index+" Degree:"+VertexDegreeArray[index]);
             index++;
         }
     }
@@ -83,9 +83,9 @@ public class Graph {
         }
         Collections.sort(DegreeSortedVertex);
         Collections.reverse(DegreeSortedVertex);
-        for (Element element : DegreeSortedVertex) {
-//            System.out.println(element.value + "--> " + element.index);
-        }
+//        for (Element element : DegreeSortedVertex) {
+////            System.out.println(element.value + "--> " + element.index);
+//        }
     }
 
 }

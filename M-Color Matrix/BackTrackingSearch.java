@@ -6,13 +6,11 @@ public class BackTrackingSearch {
     int mColor;
     List<Element> SortedDegree;
 
-    public BackTrackingSearch(Graph graph, int mColor) {
+    public BackTrackingSearch(Graph graph,int mColor) {
         this.graph = graph;
 //        this.color = color;
         this.mColor = mColor;
-        this.graph.SortVertexRespectToDegree();
         this.SortedDegree = graph.getDegreeSortedVertex();
-
     }
 
     public Graph getGraph() {
@@ -40,11 +38,9 @@ public class BackTrackingSearch {
     }
 
     /* A utility function to check if the current color(c) assignment is safe for vertex-->v */
-    boolean isSafe(Course v, int c){
-        int indexV = graph.vertexList.indexOf(v); //vertexList e tar index ber krsi
-        for (Course negihbourV: graph.vertexList.get(indexV).getAdjList()) {
-            int i = graph.vertexList.indexOf(negihbourV);
-            if (c == color[i]){
+    boolean isSafe( int v, int c){
+        for (int i = 0; i < graph.totalVertex; i++){
+            if ( graph.Graph[v][i] == 1 && c == color[i]){
                 return false;
             }
         }
@@ -52,21 +48,36 @@ public class BackTrackingSearch {
     }
 
     /* A recursive utility function to solve m coloring problem */
-    boolean recursiveBackTracking(Course v)
+    boolean recursiveBackTracking(Element v)
     {
-        /* Consider this vertex v and try different colors */
+//        System.out.println("Got vertex:"+v.index);
+//		/* base case: If all vertices are assigned a color then return true */
+//        int myCounter;
+//        for( myCounter =0; myCounter< graph.totalVertex; myCounter++){
+//            if(color[myCounter]==0) //got at least one vertex that isn't colored yet
+//                break;
+//        }
+//        System.out.println("Color ------------");
+//        for (int myColor:color) {
+//            System.out.print(myColor+" ");
+//        }
+//        System.out.println("\nColor ------------");
+//        if(myCounter == graph.totalVertex){
+//            System.out.println("all vertecies are colored");
+//            return true;
+//        }
+//        System.out.println("IM here Vertex:"+ v.index);
+//        if (v == graph.totalVertex)
+//            return true;
+
+		/* Consider this vertex v and try different colors */
         for (int c = 1; c <= getmColor(); c++) {
             /* Check if assignment of color c to v is fine*/
-            if (isSafe(v, c)) {
-                color[graph.vertexList.indexOf(v)] = c;
-                int ElementIndexInSortedDegree = -1;
-                int indexOfVList = graph.vertexList.indexOf(v);
-                for (Element x: SortedDegree) {
-                    if(x.index==indexOfVList)
-                        ElementIndexInSortedDegree = SortedDegree.indexOf(x);
-                }
+            if (isSafe(v.index, c)) {
+                color[v.index] = c;
 
-//                System.out.println("Current vertex:"+v.getCourseCode());
+                int ElementIndex = SortedDegree.indexOf(v);
+                System.out.println("Current vertex:"+v.index);
 
                 /* base case: If all vertices are assigned a color then return true */
                 int myCounter;
@@ -74,26 +85,28 @@ public class BackTrackingSearch {
                     if(color[myCounter]==0) //got at least one vertex that isn't colored yet
                         break;
                 }
-
+//                for (int myColor:color) {
+//                    System.out.print(myColor+" ");
+//                }
                 if(myCounter == graph.totalVertex){
                     System.out.println("all vertecies are colored");
                     return true;
                 }
-
-//                System.out.println("Current Index---> "+ ElementIndexInSortedDegree);
-                int NextVertexIndexInVertexList = SortedDegree.get(ElementIndexInSortedDegree+1).index;
-//                System.out.println("Next Index---> "+NextVertexIndexInVertexList);
-                Course NextVertex = graph.vertexList.get(NextVertexIndexInVertexList);
-//                System.out.println("Next vertex:"+ NextVertex.getCourseCode());
-                /* recur to assign colors to rest of the vertices, v+1 */
-                if (recursiveBackTracking(NextVertex))
+//                if (ElementIndex+1 == graph.getTotalVertex()){
+//                    //as all vertices explored , re initialised
+//                    ElementIndex = 0;
+//                }
+                Element VertexElement = SortedDegree.get(ElementIndex+1);
+                System.out.println("Next vertex:"+ VertexElement.index);
+				/* recur to assign colors to rest of the vertices, v+1 */
+                if (recursiveBackTracking(VertexElement))
                     return true;
-                /* If assigning color c doesn't lead to a solution then remove it */
-                color[graph.vertexList.indexOf(v)] = 0;
+				/* If assigning color c doesn't lead to a solution then remove it */
+                color[v.index] = 0;
             }
         }
 
-        /* If no color can be assigned to this vertex then return false */
+		/* If no color can be assigned to this vertex then return false */
         return false;
     }
 
@@ -116,11 +129,10 @@ public class BackTrackingSearch {
 
         // Call recursiveBackTracking() for the vertex that has the largest degree
 
-        int startIndexOfVertexList = SortedDegree.get(0).index;
-        Course startVertex = graph.vertexList.get(startIndexOfVertexList);
-        System.out.println("Starting Vertex/index:"+startVertex.getCourseCode());
+        Element VertexElement = SortedDegree.get(0);
+        System.out.println("Starting Vertex/index:"+VertexElement.index);
 
-        if ( !recursiveBackTracking(startVertex)) {
+        if ( !recursiveBackTracking(VertexElement)) {
             System.out.println("Solution does not exist");
             return false;
         }
@@ -134,14 +146,8 @@ public class BackTrackingSearch {
     void printSolution()
     {
         System.out.println( "Solution Exists: Following" + " are the assigned colors");
-
-        for (int i = 0; i < graph.getTotalVertex(); i++)
-            System.out.print(" " + graph.vertexList.get(i) .getCourseCode()+ " ");
-        System.out.println("-----------------------------");
-
         for (int i = 0; i < graph.getTotalVertex(); i++)
             System.out.print(" " + color[i] + " ");
-
         System.out.println();
     }
 }
